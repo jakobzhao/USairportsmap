@@ -62,8 +62,17 @@ var mymap = L.map('map', {
     detectRetina: true // detect whether the sceen is high resolution or not.
 });
 
+
+
+var Thunderforest_OpenCycleMap = L.tileLayer('https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey={apikey}', {
+	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	apikey: '<your apikey>',
+	maxZoom: 22
+});
+
+
 // 2. Add a base map.
-L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(mymap);
+L.tileLayer('https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey={apikey}').addTo(mymap);
 
     // 3. Add cell towers GeoJSON Data
     // Null variable that will hold cell tower data
@@ -76,11 +85,11 @@ L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(
     }
     // Get GeoJSON and put on it on the map when it loads
     airports= L.geoJson.ajax("assets/airports.geojson", {
-        // assign a function to the onEachFeature parameter of the cellTowers object.
+        // assign a function to the onEachFeature parameter of the Towers object.
         // Then each (point) feature will bind a popup window.
         // The content of the popup window is the value of `feature.properties.company`
         onEachFeature: function (feature, layer) {
-            layer.bindPopup(feature.properties.company);
+            layer.bindPopup(feature.properties.CITY  + "," +feature.properties.STATE + "   Tower:" + feature.properties.CNTL_TWR);
         },
         pointToLayer: function (feature, latlng) {
             var id = 0;
