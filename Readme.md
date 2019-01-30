@@ -1,8 +1,19 @@
 ## A Web-Map of Airports in the United States
 
-This map shows airports in the the United States and if they have a control tower or not. Airport data is collected from a shapefile from [Data.Gov][]. US-States boundary data is acquired from [Mike Bostock][] of [D3][]. An interactive element is added to each location with information on the city and state in which the airport is located. 
+#### Data:
+This map shows airports in the the United States and if they have a control tower or not. Airport data is collected from a shapefile from [Data.Gov][]. US-States boundary data is acquired from [Mike Bostock][] of [D3][].
 
-Clicking on the bottom left interactive square will open a window that shows coordinates as you move the mouse across the screen, incorporated by [leaflet.coordinates][]
+#### Clickable Item:
+An interactive element is added to each location with information on the city and state in which the airport is located. To retrieve this infomation click on the airplane figure.
+
+
+
+
+
+#### Add feature of leaflet :
+Coordinates were also added to follow your mouse while it scolls the screen. [leaflet.coordinates][]
+
+
 
 
 
