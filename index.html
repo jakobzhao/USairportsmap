@@ -95,7 +95,7 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical
             else if (feature.properties.CNTL_TWR == "N")  { id = 1; }
             return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-plane marker-color-' + (id + 1).toString() })});
         },
-        attribution: 'Airport Data &copy; Map Cruzin | US State Boundaries &copy; Oregon Explorer | Base Map &copy; CartoDB | Made By Ashley Lowe'
+        attribution: 'Airport Data &copy; Data.gov | US State Boundaries &copy; Mike Bostock | Base Map &copy; Leaflet | Made By Ashley Lowe'
     }).addTo(mymap);
 
     // 6. Set function for color ramp
@@ -160,13 +160,15 @@ legend.addTo(mymap);
 // 12. Add a scale bar to map
 L.control.scale({position: 'bottomleft'}).addTo(mymap);
 
+
+
 L.control.coordinates({
 	position:"bottomleft", //optional default "bootomright"
 	decimals:2, //optional default 4
 	decimalSeperator:".", //optional default "."
 	labelTemplateLat:"Latitude: {y}", //optional default "Lat: {y}"
 	labelTemplateLng:"Longitude: {x}", //optional default "Lng: {x}"
-	customLabelFcn: function(latLonObj, opts) { "Geohash: " + encodeGeoHash(latLonObj.lat, latLonObj.lng)} //optional default none
+
 }).addTo(mymap);
 L.control.coordinates().addTo(mymap);
 		//add configured controls
