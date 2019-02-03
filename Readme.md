@@ -1,26 +1,26 @@
 ## A Web-Map of Airports in the United States
 This map shows how many airports are in each state in the the United States and if they have a control tower or not.
 
-#### Data:
+### Data:
 * Airport data is collected from a shapefile from [Data.Gov][].
 *  US-States boundary data is acquired from [Mike Bostock][] of [D3][].
 *  Basemap shows geographic features choosen from [Leaflet Previews][].
 *   Font Awesome was used for the symbol of the plane.
 
 
-#### Clickable Item:
+### Clickable Item:
 An interactive element is added to each location with information on the city and state in which the airport is located. To retrieve this infomation click on the airplane figure of interest.
 
-#### Legend
+### Legend
 The legend is catogozied by color, providing information on how many airports are in each state. The color of plane symnbol indicates if there is a control tower or not.
 
 
 
-#### Added feature form leaflet :
+### Added feature form leaflet :
 Coordinates were also added to follow your mouse while it scolls the screen around on the screen. [leaflet.coordinates][]
 
 
-#### Acknowledgements
+### Acknowledgements
 Credit for project concept to Prof Bo Zhao and the class [GEOG 571][].
 
 
