@@ -23,6 +23,6 @@ Coordinates were also added to follow your mouse while it scolls the screen arou
 [Data.Gov]: https://catalog.data.gov/dataset/usgs-small-scale-dataset-airports-of-the-united-states-201207-shapefile
 [Mike Bostock]: https://bost.ocks.org/mike/
 [D3]: https://d3js.org/
-[Leaflet Previews] : https://leaflet-extras.github.io/leaflet-providers/preview/
+[Leaflet Previews]: https://leaflet-extras.github.io/leaflet-providers/preview/
 [leaflet.coordinates]: https://github.com/MrMufflon/Leaflet.Coordinates
-[GEOG 571] : https://github.com/jakobzhao/geog571
+[GEOG 571]: https://github.com/jakobzhao/geog571
