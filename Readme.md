@@ -12,7 +12,7 @@ The legend is catogozied by color, providing information on how many airports ar
 
 
 
-#### Add feature of leaflet :
+#### Added feature form leaflet :
 Coordinates were also added to follow your mouse while it scolls the screen around on the screen. [leaflet.coordinates][]
 
 
