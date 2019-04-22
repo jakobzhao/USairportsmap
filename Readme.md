@@ -8,6 +8,12 @@ This map shows how many airports are in each state in the the United States and 
 *  Basemap shows geographic features choosen from [Leaflet Previews][].
 *   Font Awesome was used for the symbol of the plane.
 
+### Graticules:
+Change the default to blue, font : Dosis and doubled the interval so there were not as many lines at the starting screen.
+
+### Dynamic labels
+Font chosen : [Anton](https://fonts.google.com/specimen/Anton
+) 
 
 ### Clickable Item:
 An interactive element is added to each location with information on the city and state in which the airport is located. To retrieve this infomation click on the airplane figure of interest.
