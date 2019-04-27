@@ -76,21 +76,23 @@
 <div id="map"></div>
 <script>
 // 1. Create a map object.
+mycrs = new L.Proj.CRS('EPSG:2162',
+    '+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +units=m +no_defs ',
+    {
+        resolutions: [8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1] // example zoom level resolutions
+    }
+);
 var mymap = L.map('map', {
-
+    crs: mycrs, // 19. assign the custom crs to the crs option. change the zoom levels due to the change of projection.
     center: [38, -95.93],
-    zoom: 4.5,
+    zoom: 1, // we choose zoom level 3
     maxZoom: 10,
-    minZoom: 3,
-    detectRetina: true // detect whether the sceen is high resolution or not.
-});
-
+    minZoom: 0,
+    detectRetina: true});
 
 
 
 // 2. Add a base map.
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png').addTo(mymap);
-
     // 3. Add cell towers GeoJSON Data
     // Null variable that will hold cell tower data
     var airports = null;
@@ -182,7 +184,7 @@ return div;
 legend.addTo(mymap);
 
 // 12. Add a scale bar to map
-L.control.scale({position: 'bottomleft'}).addTo(mymap);
+//L.control.scale({position: 'bottomleft'}).addTo(mymap);
 
 //add standard controls
 L.control.coordinates().addTo(mymap);
@@ -193,7 +195,7 @@ L.latlngGraticule({
     color: "#001b89",
     font: 'Dosis',
     zoomInterval: [
-        {start: 2, end: 10, interval: 4},
+        {start: 0, end: 10, interval: 2},
         {start: 8, end: 11, interval: 1}
     ]
 }).addTo(mymap);
@@ -255,12 +257,6 @@ mymap.on("zoomend", function(){
     });
     labelEngine.update();
 });
-mycrs = new L.Proj.CRS('EPSG:2991',
-    '+proj=aea +lat_1=41 +lat_2=47 +lat_0=44 +lon_0=-120 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs',
-    {
-        resolutions: [8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1] // example zoom level resolutions
-    }
-);
 
 </script>
 </body>
